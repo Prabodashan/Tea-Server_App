@@ -16,10 +16,10 @@ app.get("/", (req, res) => {
   res.send({ temp, him });
 });
 
-app.post("/api/data", (req, res) => {
+app.get("/api/data", (req, res) => {
   console.log(req.body);
-  temp = req.body.temp;
-  him = req.body.him;
+  temp = req.query.temperature;
+  him = req.query.temperature;
   res.send("Hello World!");
 });
 
