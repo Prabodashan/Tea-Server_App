@@ -20,7 +20,7 @@ app.get("/api/data", (req, res) => {
   console.log(req.body);
   temp = req.query.temperature;
   him = req.query.humidity;
-  res.send("Hello World!");
+  res.json({ temp: req.query.temperature, humidity: req.query.humidity });
 });
 
 // Error route
