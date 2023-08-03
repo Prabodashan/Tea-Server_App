@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("well");
+  res.send({ temp, him });
 });
 
 app.get("/api/data", (req, res) => {
